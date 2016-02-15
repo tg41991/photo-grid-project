@@ -7,8 +7,8 @@ $(function() {
 
       var instaphotos = '',
           $photos = $('.photos');
-          
-      $("header").addClass("populatedheader");
+
+      $("insta-header").addClass("photoheader");
 
         $.ajax({
             dataType: 'jsonp', //format type

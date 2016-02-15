@@ -1,20 +1,25 @@
 .insta-header {
     height: 90vh;
     display:flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-content: center;
 
     @include tablet {
-    flex-wrap:nowrap;;
+      display: flex;
+      flex-wrap:nowrap;
+      justify-content: center;
       }
-    //
+
      @include desktop {
+       display: flex;
+       flex-wrap: nowrap;
        justify-content:flex-start;
+       align-items: center;
      }
 }
 
-.populatedheader {
+.photoheader {
 	display: flex;
 	flex-direction: row;
 	padding: 2em;
