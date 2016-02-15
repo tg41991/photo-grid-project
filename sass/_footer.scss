@@ -1,0 +1,13 @@
+
+.insta-footer {
+  height: 10vh;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  color: #c2c2c2;
+
+  @include desktop {
+    justify-content:flex-start;
+  }
+}

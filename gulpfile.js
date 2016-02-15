@@ -1,20 +1,10 @@
 var gulp = require('gulp');
-// will go to node modules folder - find gulp, pulls in code
 var uglify = require('gulp-uglify');
-// makes files smaller
 var browserSync = require('browser-sync').create();
-// auto Sync the browswer when changes are made
 var plumber = require('gulp-plumber');
-// prevent pipe breaking caused by errors from gulp plugins
 var notify = require('gulp-notify');
-// to send messages based on Vinyl Files or Errors to Mac OS X, Linux or Windows using the node-notifier module.
-// gulp-notify passes on the vinyl files even on error. So if you are using gulp-plumber the run will not break if the notifier returns an error.
-//If you want to notify on errors gulp-plumber can be used to not break the run and force you to have to restart gulp.
 var rename = require("gulp-rename");
-// to rename files easily.
 var jscs = require('gulp-jscs');
-// check JavaScript code style with jscs + report
-
 var sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'), //this will take care of vendor prefixes
     minifyCSS = require('gulp-cssnano');
@@ -46,8 +36,6 @@ gulp.task('uglify', function(){
 // use the ./ for this to work
 
 gulp.task('watch', function(){
-    // Watch the folder specified in our 'uglify' task
-    // gulp.watch('./js/script.js', ['uglify']);
 
     browserSync.init({
       server: {

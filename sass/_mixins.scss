@@ -1,0 +1,15 @@
+$tablet-width: 600px;
+
+@mixin tablet {
+  @media all and (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+$desktop-width: 1000px;
+
+@mixin desktop {
+  @media all and (min-width: $desktop-width) {
+    @content;
+  }
+}

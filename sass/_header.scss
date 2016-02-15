@@ -1,0 +1,106 @@
+.insta-header {
+    height: 90vh;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    @include tablet {
+    flex-wrap:nowrap;;
+      }
+    //
+     @include desktop {
+       justify-content:flex-start;
+     }
+}
+
+.populatedheader {
+	display: flex;
+	flex-direction: row;
+	padding: 2em;
+	height: auto;
+	transition: 1s ease-in-out;
+}
+
+/* flex item/child of insta-header */
+.insta-logo {
+  max-width: 300px;
+  display:flex;
+
+  @include tablet {
+    max-width:250px;
+    margin: 0 1rem;
+    }
+}
+
+/* flex item/child of insta-logo */
+.insta-logo img {
+  max-width: 100%;
+
+  @include tablet {
+     //code in here
+   }
+
+   @include desktop {
+     //code in here
+   }
+
+}
+
+/* flex item/child of insta-header */
+.search-form {
+  max-width: 300px;
+  display:flex;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    max-width:250px;
+    margin: 0 1rem;
+   }
+}
+
+/* flex item/child of search-form */
+.search-form-contents {
+  max-width: 300px;
+  border-bottom: 1px solid #ffffff;
+
+  @include tablet {
+    max-width:250px;
+    display:inline-flex;
+   }
+
+}
+
+.search-form-contents::before {
+  content: "#";
+  color: #ffffff;
+  background-color: #000;
+  font-size: 1.4rem;
+  padding-right: 0.5rem;
+}
+
+.search-form-contents input {
+  color: #ffffff;
+  background-color: #000;
+  border:none;
+  font-family:'Open Sans';
+  font-size: 1.1rem;
+}
+
+button {
+  background-color: #000;
+  border:none;
+}
+
+.search-form-contents span {
+  color: #ffffff;
+  background-color: #000;
+  font-size: 1.1rem;
+  padding-left: 1.75rem;
+
+  &:hover {
+    color: #e2231a;
+  }
+}

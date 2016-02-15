@@ -1,0 +1,81 @@
+
+.instagram-uploads {
+  margin-bottom: 2em;
+}
+
+.photos {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  flex-direction: column;
+  margin-bottom:2rem;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+  li {
+    flex: 0 1 100%;
+    max-width: 100%;
+
+  @include tablet {
+    flex: 0 1 33.33%;
+    max-width: 33.33%;
+  }
+
+  @include desktop {
+    flex: 0 1 25%;
+    max-width: 25%;
+  }
+}
+
+.ig-photo-wrap {
+  position:relative;
+  max-width: 100%;
+  display:flex;
+
+  .ig-specs {
+    position:absolute;
+    background:rgba(0,0,0,0.6);
+    color: #ffffff;
+    display:flex;
+    bottom: 0;
+    font-size: 1rem;
+    padding::0.5rem;
+    max-width: 100%;
+    align-content: center;
+    }
+    .profile-pic-wrap {
+     height:auto;
+     overflow:hidden;
+     width:33%
+    }
+
+    .profile-pic-wrap img {
+      border-radius: 50%;
+      max-width: 80px;
+      max-height:80px;
+    }
+
+    .ig-social-wrap {
+      font-weight: 700;
+      text-align: right;
+      width: 67%;
+      line-height: 1.75rem;
+      margin-top: 1rem;
+      margin-right: 1rem;
+      font-size: 1.35rem;
+    }
+
+    .ig-social-wrap span {
+      margin: 0 0.3rem;
+    }
+}
